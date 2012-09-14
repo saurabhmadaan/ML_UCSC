@@ -1,0 +1,70 @@
+\documentclass[11pt, oneside]{article}   	% use "amsart" instead of "article" for AMSLaTeX format
+\usepackage{geometry}                		% See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   		% ... or a4paper or a5paper or ... 
+%\geometry{landscape}                		% Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    		% Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}				% Use pdf, png, jpg, or eps§ with pdflatex; use eps in DVI mode
+								% TeX will automatically convert eps --> pdf in pdflatex		
+\usepackage{amssymb}
+\usepackage{graphics}
+\usepackage{listings}
+\lstset{language=R, frame=single, basicstyle=\small, 
+		rangeprefix=\#\#--,  rangesuffix=----, numbers=left, 
+		breaklines=true, includerangemarker=false}
+
+\title{HW1 - Intro to Machine Learning}
+\author{Saurabh Madaan}
+\date{09/14/2012}							% Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+\section{Part 1 - HW01pb1data.csv}
+\subsection{Attributes}
+The dataset has 800 observations of 5 variables. The first 3 columns are \emph{integers} whereas the 4th and 5th columns are \emph{factors}.
+
+In R, this can be seen using the following commands: 
+
+\lstinputlisting[linerange=Q1s-Q1e]{HW1_1.R}
+
+
+\subsection{Reason for Categorical Variables}
+Columns 4 and 5 mostly have integers in them, but when one looks in to the \emph{levels}, it is quickly visible that they also have strings ``thirty five" and ``twenty five", respectively. Consequently, \emph{R} treats them as factors. 
+
+Below are the R commands which provide more details:
+\lstinputlisting[linerange=Q2s-Q2e]{HW1_1.R}
+
+
+\subsection{Plots for numeric and categorical variables}
+
+1. Plot of the 1st column (numerical data)
+\lstinputlisting[linerange=Q31s-Q31e]{HW1_1.R}
+\includegraphics[scale=0.5]{13a.pdf}
+
+The y-axis of this plot are the values of the first column data, plotted against the index (row number) at which they occur in the dataset. This is a scatter-plot for a numerical data type
+
+.
+
+2. Plot of the 4th column (categorical data)
+\lstinputlisting[linerange=Q32s-Q32e]{HW1_1.R}
+\includegraphics[scale=0.5]{13b.pdf}
+
+This graph is a distribution: it is a histogram with the x-axis showing the values in the 4th column of our dataset, and the y-axis depicts the frequency with which values occur in a specified range. This graph is default since the 4th column data happens to be a categorical variable in our dataset.
+
+
+\section{Part 2 - HW01pb2data.csv}
+
+\subsection{Extract a random sample of 10k observations}
+\lstinputlisting[linerange=Q1s-Q1e]{HW1_2.R}
+
+
+\subsection{Descriptive Stats on Sample}
+\lstinputlisting[linerange=Q2s-Q2e]{HW1_2.R}
+
+
+
+
+
+
+
+
+\end{document}  
