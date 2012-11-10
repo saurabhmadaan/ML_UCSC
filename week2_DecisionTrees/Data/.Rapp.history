@@ -1,0 +1,68 @@
+rm(list=ls())#
+#install.packages("klaR")#
+#install.packages("e1071")#
+library(klaR)#
+#
+require(klaR)#
+#
+data(iris)#
+#have a look at the data#
+iris#
+labels(iris)
+m <- NaiveBayes(Species ~ ., data = iris)
+require(klaR)
+install.packages(klar)
+install.packages('klar')
+install.packages('klaR')
+require(klaR)
+data(iris)#
+#have a look at the data#
+iris#
+labels(iris)
+m <- NaiveBayes(Species ~ ., data = iris)
+data(iris)
+mN <- NaiveBayes(Species ~ ., data = iris)
+str(mN)
+plot(mN)
+partimat(Species ~ ., data = iris, method = "naiveBayes")
+m <- NaiveBayes(Species ~ ., data = iris)
+require(klaR)
+m <- NaiveBayes(Species ~ ., data = iris)
+out <- predict(m)
+Err <- 1 - sum(out$class == iris$Species)/length(iris$Species)
+Err
+library(klaR)#
+#
+data <- read.csv('winequality-red.csv')
+getwd()
+setwd('/Users/smadaan/Documents/ML_UCSC/week2/Data')
+library(klaR)
+data <- read.csv('winequality-red.csv')
+str(data)
+data <- read.csv('winequality-red.csv', header=TRUE)
+str(data)
+data <- read.csv('winequality-red.csv', header=TRUE, sep=';')
+str(data)
+wdata <- read.csv('winequality-red.csv', header=TRUE, sep=';')
+str(wdata)
+mod <- NaiveBayes(quality~.,data = wdata)
+wdata$quality <- as.factor(wdata$quality)
+mod <- NaiveBayes(quality~.,data = wdata)
+table(predict(mod, wdata), wdata$species)
+table(predict(mod, wdata), wdata$quality)
+qualityHat <- predict(mod, wdata)
+Err <- 1 - sum(qualityHad$class == wdata$quality)/length(wdata$quality)
+Err <- 1 - sum(qualityHat$class == wdata$quality)/length(wdata$quality)
+Err
+mod <- NaiveBayes(quality~.,data = wdata)
+qualityHat <- predict(mod, wdata[,-12])
+Err <- 1 - sum(qualityHat$class == wdata$quality)/length(wdata$quality)#
+Err
+warnings()
+mod <- NaiveBayes(quality~.,data = wdata)
+#
+qualityHat <- predict(mod, wdata[,1:11])
+cor(wdata)
+corr(wdata)
+cor(wdata[,1:11])
+pairs(wdata[,1:11])
