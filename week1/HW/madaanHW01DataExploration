@@ -122,7 +122,7 @@ The BoxPlot shows the distribution of prices between the two kinds of houses. De
 
 \subsection{ECDF for House Prices}
 \emph{R} code for ecdf plots: 
-\lstinputlisting[linerange=Q2s-Q2e]{HW1_3.R}
+\lstinputlisting[linerange=Q3s-Q3e]{HW1_3.R}
 
 \begin{figure}[htbp]
 \includegraphics[scale=0.75]{33.pdf}
